@@ -88,19 +88,17 @@ nav ul li a:hover {
   background-color: #575757;
 }
 
-main {
-  padding: 20px;
-}
-
 .menu-section {
-  margin-bottom: 40px;
+  padding: 20px;
 }
 
 .menu-section h2 {
   text-align: center;
   font-size: 2em;
+  color: #333;
   margin-bottom: 20px;
-  color: #4CAF50;
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px;
 }
 
 .menu-items {
@@ -110,19 +108,18 @@ main {
 }
 
 .menu-item {
-  background-color: #fff;
+  background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   margin: 20px;
   width: 300px;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
   text-align: center;
+  transition: transform 0.2s ease-in-out;
 }
 
 .menu-item:hover {
   transform: translateY(-10px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .menu-item img {
@@ -144,20 +141,21 @@ main {
 .menu-details p {
   margin: 10px 0;
   color: #666;
+  font-size: 1em;
 }
 
 .menu-details button {
-  background-color: #4CAF50;
+  background-color: #28a745;
   border: none;
   border-radius: 20px;
   color: white;
   padding: 10px 20px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 1em;
 }
 
 .menu-details button:hover {
-  background-color: #45a049;
+  background-color: #218838;
 }
 
 .cart-container {
