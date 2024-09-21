@@ -8,7 +8,7 @@ const Cart = ({ cart, totalPrice, checkout, toggleCart }) => (
         <li key={index}>{item.name} - {item.price} บาท</li>
       ))}
     </ul>
-    <p>ราคารวม: <span>{totalPrice}</span> บาท</p>
+    <p>ราคาทั้งหมด: <span>{totalPrice}</span> บาท</p>
     <button onClick={checkout}>สั่งซื้อ</button>
   </div>
 );
