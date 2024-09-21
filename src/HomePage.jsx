@@ -26,7 +26,7 @@ const menumain = [
     { name: 'ข้าวยำไก่แซ่บ', price: 65, image: 'https://img.wongnai.com/p/1920x0/2020/11/07/95ce4ec6055a4e02a650c1c58dd41849.jpg' },
     { name: 'หอยทอด', price: 75, image: 'https://img.wongnai.com/p/l/2017/05/29/5309d0a9b15d4907b6389b6a6787fc7e.jpg' },
     { name: 'ข้าวน้ำพริกกะปิปลาทู', price: 75, image: 'https://img.wongnai.com/p/1920x0/2018/03/01/a47f84a3a653472cb86d4874ac22e2fe.jpg' },
-    { name: 'สปาเกตตี้แฮมเห็ด', price: 110, image: 'https://inwfile.com/s-cy/8avqkv.jpg' },
+  { name: 'สปาเกตตี้แฮมเห็ด', price: 110, image: 'https://inwfile.com/s-cy/8avqkv.jpg' },
 ];
 
 const menusnack =
@@ -41,7 +41,7 @@ const menusnack =
 const menudrink =
 [
    { name: 'น้ำเก๊กฮวย', price: 45, image: 'https://f.ptcdn.info/343/079/000/rn73ea11ekAkF7q758J9-o.jpg' },
-   { name: 'น้ำเก๊กฮวย', price: 45, image: 'https://f.ptcdn.info/343/079/000/rn73ea11ekAkF7q758J9-o.jpg' },
+   { name: 'น้ำเก๊กฮวย', price: 45, image: 'https://yalamarketplace.com/upload/1658399714294.jpg' },
    { name: 'น้ำเก๊กฮวย', price: 45, image: 'https://f.ptcdn.info/343/079/000/rn73ea11ekAkF7q758J9-o.jpg' },
    { name: 'น้ำเก๊กฮวย', price: 45, image: 'https://f.ptcdn.info/343/079/000/rn73ea11ekAkF7q758J9-o.jpg' },
    { name: 'น้ำเก๊กฮวย', price: 45, image: 'https://f.ptcdn.info/343/079/000/rn73ea11ekAkF7q758J9-o.jpg' },
@@ -88,26 +88,31 @@ const HomePage = () => {
         </ul>
         </nav>
       <main>
-        <section className="menu-section">
+        <section id="menu-sction" className="menu-section">
           <h2>เมนูแนะนำ</h2>
           <div className="menu-items">
             {menuItems.map((item, index) => (
               <MenuItem key={index} item={item} addToCart={addToCart} />
             ))}
           </div>
+          </section>
+        <section id="main-dishes" className="menu-section">
           <h2>อาหารจานเดี่ยว</h2>
           <div className="menu-items">
             {menumain.map((item, index) => (
               <MenuItem key={index} item={item} addToCart={addToCart} />
             ))}
-            
           </div>
+          </section>
+          <section id="snacks" className="menu-section">
           <h2>ของทานเล่น</h2>
           <div className="menu-items">
             {menusnack.map((item, index) => (
               <MenuItem key={index} item={item} addToCart={addToCart} />
             ))}
           </div>
+          </section>
+          <section id="drinks" className="menu-section">
           <h2>น้ำ</h2>
           <div className="menu-items">
             {menudrink.map((item, index) => (
