@@ -202,3 +202,43 @@ nav ul li a:hover {
 .cart-container button:hover {
   background-color: #e65b50;
 }
+
+.menu-item {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 16px;
+  margin: 16px 0;
+  display: flex;
+  align-items: center;
+  transition: box-shadow 0.3s;
+}
+
+.menu-item:hover {
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.menu-item img {
+  max-width: 100px;
+  margin-right: 16px;
+  border-radius: 4px;
+}
+
+.menu-details {
+  flex: 1;
+}
+
+.quantity-container {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.quantity-input {
+  width: 50px;
+  margin-left: 8px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
