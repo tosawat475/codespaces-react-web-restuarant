@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Cart = ({ cart, toggleCart, deleteCart,checkout }) => {
+const Cart = ({ cart, toggleCart, deleteCart, checkout }) => {
   const [showModal, setShowModal] = useState(false);
   const [isCheckedOut, setIsCheckedOut] = useState(false); // Track checkout status
 
@@ -21,7 +21,7 @@ const Cart = ({ cart, toggleCart, deleteCart,checkout }) => {
     setIsCheckedOut(false);
     checkout(); // Reset status for new orders
   };
-  
+
 
   return (
     <div className="cart-container">
@@ -44,11 +44,13 @@ const Cart = ({ cart, toggleCart, deleteCart,checkout }) => {
 
       {showModal && (
         <div className="modal">
-          <div className="modal-content">
-            <span className="close" onClick={handleCloseModal}>&times;</span>
+          <div className='successcart'>
+            <div className="modal-content">
+            <img src="https://cdn.pixabay.com/photo/2016/03/31/14/37/check-mark-1292787_1280.png" alt="successcart" />
             <p>สั่งออเดอร์สำเร็จ!</p>
             <button onClick={handleCloseModal}>กลับไปที่หน้าแรก</button>
           </div>
+        </div>
         </div>
       )}
 
@@ -74,6 +76,10 @@ const Cart = ({ cart, toggleCart, deleteCart,checkout }) => {
           cursor: pointer;
           float: right;
           font-size: 20px;
+        }
+        .successcart img {
+          height: 60px;
+          width: 50px;
         }
       `}</style>
     </div>

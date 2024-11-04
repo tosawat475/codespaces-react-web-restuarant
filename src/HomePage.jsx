@@ -90,7 +90,6 @@ const HomePage = () => {
   };
 
   const checkout = () => {
-    alert('คุณได้สั่งซื้อสินค้าเรียบร้อยแล้ว');
     setCart([]);
     setTotalPrice(0);
     toggleCart();
