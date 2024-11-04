@@ -98,6 +98,7 @@ const HomePage = () => {
   return (
     <div>
       <Header cartCount={cart.length} toggleCart={toggleCart} />
+      <header>
       <nav>
         <ul>
             <li><a href="#menu-sction">เมนูแนะนำ</a></li>
@@ -106,6 +107,7 @@ const HomePage = () => {
             <li><a href="#drinks">น้ำ</a></li>
         </ul>
         </nav>
+      </header>
       <main>
         <section id="menu-sction" className="menu-section">
           <h2>เมนูแนะนำ</h2>

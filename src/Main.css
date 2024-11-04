@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    background-color: #6bd36e;
+  }
+  
+  .logo {
+    border-radius: 50%;
+    width: 350px;
+    height: 350px;
+    margin-bottom: 20px;
+  }
+  .container span {
+    font-size: 26px;
+  }

@@ -7,12 +7,8 @@ const Cart = ({ cart, toggleCart, deleteCart, checkout }) => {
   // Calculate total price based on items in the cart
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
-  const clearCart = () => {
-    setIsCheckedOut(true); // Set checkout status to checked out
-  };
 
   const handleCheckout = () => {
-    clearCart(); // Clear cart items
     setShowModal(true); // Show modal
   };
 
@@ -21,7 +17,6 @@ const Cart = ({ cart, toggleCart, deleteCart, checkout }) => {
     setIsCheckedOut(false);
     checkout(); // Reset status for new orders
   };
-
 
   return (
     <div className="cart-container">
