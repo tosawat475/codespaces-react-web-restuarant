@@ -26,7 +26,7 @@ const Cart = ({ cart, toggleCart, removeFromCart }) => {
       <h2>ตะกร้าของคุณ</h2>
       <ul>
         {isCheckedOut ? (
-          <li>รายการของคุณถูกล้างเรียบร้อยแล้ว</li>
+          <li>ออเดอร์ของคุณกำลังมา!!</li>
         ) : (
           cart.map((item, index) => (
             <li key={index}>
