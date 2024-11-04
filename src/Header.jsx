@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Header = ({ cartCount, toggleCart,backmain }) => (
+const Header = ({ cartCount, toggleCart,backmain,searchmenu }) => (
   <header>
     <div className="header-container">
       <div className="profile">
@@ -8,7 +8,6 @@ const Header = ({ cartCount, toggleCart,backmain }) => (
         <span onClick={backmain}>Welcome to Resturant</span>
       </div>
       <input type="text" id="searchInput" placeholder="ค้นหาเมนู..."  />
-      
       <div className="cart">
         <button id="cartButton" onClick={toggleCart}>ตะกร้า (<span id="cartCount">{cartCount}</span>)</button>
       </div>
