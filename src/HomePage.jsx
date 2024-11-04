@@ -73,6 +73,18 @@ const HomePage = () => {
     setTotalPrice(totalPrice + item.price);
   };
 
+  const deleteCart = (item) => {
+    const itemIndex = cart.findIndex(cartItem => cartItem.id === item.id);
+    if (itemIndex >= 0) {
+      const updatedCart = [...cart];
+      updatedCart.splice(itemIndex, 1);
+      const updatedTotalPrice = totalPrice - item.price;
+  
+      setCart(updatedCart);
+      setTotalPrice(updatedTotalPrice);
+    }
+  };
+
   const toggleCart = () => {
     document.querySelector('.cart-container').classList.toggle('show');
   };
@@ -129,7 +141,7 @@ const HomePage = () => {
           </div>
         </section>
       </main>
-      <Cart cart={cart} totalPrice={totalPrice} checkout={checkout} toggleCart={toggleCart} />
+      <Cart cart={cart} totalPrice={totalPrice} checkout={checkout} toggleCart={toggleCart} deleteCart={deleteCart} />
     </div>
   );
 };

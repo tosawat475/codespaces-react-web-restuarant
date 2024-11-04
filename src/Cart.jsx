@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const Cart = ({ cart, toggleCart, removeFromCart }) => {
+const Cart = ({ cart, toggleCart, deleteCart,checkout }) => {
   const [showModal, setShowModal] = useState(false);
   const [isCheckedOut, setIsCheckedOut] = useState(false); // Track checkout status
 
@@ -18,8 +18,10 @@ const Cart = ({ cart, toggleCart, removeFromCart }) => {
 
   const handleCloseModal = () => {
     setShowModal(false); // Close modal
-    setIsCheckedOut(false); // Reset status for new orders
+    setIsCheckedOut(false);
+    checkout(); // Reset status for new orders
   };
+  
 
   return (
     <div className="cart-container">
@@ -31,7 +33,7 @@ const Cart = ({ cart, toggleCart, removeFromCart }) => {
           cart.map((item, index) => (
             <li key={index}>
               {item.name} - {item.price} บาท (จำนวน: {item.quantity})
-              <button onClick={() => removeFromCart(item)}>ลบ</button>
+              <button onClick={() => deleteCart(item)}>ลบ</button>
             </li>
           ))
         )}
