@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import HomePage from './HomePage';
 import Main from './Main';
+import Header from './Header';
 import './App.css';
 
 const App = () => {
@@ -10,9 +11,17 @@ const App = () => {
     setCurrentPage('homepage');
   };
 
+  const backmain = () => {
+    setCurrentPage('main');
+  }
+
   return (
     <div className="App">
-      {currentPage === 'main' ? <Main goToHomePage={goToHomePage} /> : <HomePage />}
+      {currentPage === 'main' ? (
+        <Main goToHomePage={goToHomePage} />
+      ) : (
+        <HomePage backmain={backmain} />
+      )}
     </div>
   );
 };

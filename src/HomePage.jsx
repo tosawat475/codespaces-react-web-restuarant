@@ -68,6 +68,7 @@ const HomePage = () => {
 
   return (
     <div>
+      
       <Header cartCount={cart.length} toggleCart={toggleCart} />
       <header>
         <nav>
