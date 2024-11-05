@@ -5,7 +5,7 @@ import Cart from './Cart';
 import axios from 'axios';
 
 const HomePage = () => {
-  const URL = "https://bug-free-chainsaw-wrvvp9wwp64xf94q4-5000.app.github.dev";
+  const URL = "https://reimagined-engine-jj4p45r76qj6crww-5000.app.github.dev";
   
   const [menuItems, setMenuItems] = useState([]);
   const [menumain, setMenumain] = useState([]);
@@ -16,7 +16,7 @@ const HomePage = () => {
 
   // ดึงข้อมูลสำหรับแต่ละเมนู
   useEffect(() => {
-    axios.get(`${URL}/api/menuItems`)
+    axios.get(`${URL}/api/menuItem`)
       .then(response => setMenuItems(response.data))
       .catch(error => console.log("Error fetching menu items:", error));
   }, []);
