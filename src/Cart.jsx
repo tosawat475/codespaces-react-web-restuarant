@@ -2,20 +2,19 @@ import React, { useState } from 'react';
 
 const Cart = ({ cart, toggleCart, deleteCart, checkout }) => {
   const [showModal, setShowModal] = useState(false);
-  const [isCheckedOut, setIsCheckedOut] = useState(false); // Track checkout status
+  const [isCheckedOut, setIsCheckedOut] = useState(false);
 
-  // Calculate total price based on items in the cart
   const totalPrice = cart.reduce((total, item) => total + item.price * item.quantity, 0);
 
 
   const handleCheckout = () => {
-    setShowModal(true); // Show modal
+    setShowModal(true); 
   };
 
   const handleCloseModal = () => {
-    setShowModal(false); // Close modal
+    setShowModal(false); 
     setIsCheckedOut(false);
-    checkout(); // Reset status for new orders
+    checkout(); 
   };
 
   return (
