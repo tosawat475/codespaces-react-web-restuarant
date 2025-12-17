@@ -5,7 +5,9 @@ import Cart from './Cart';
 import axios from 'axios';
 
 const HomePage = () => {
-  const URL = "https://reimagined-engine-jj4p45r76qj6crww-5000.app.github.dev";
+  const MENU_URL = "http://localhost:5000";      // backend เดิม
+  const CATEGORY_URL = "http://localhost:6001"; // category microservice
+
   
   const [menuItems, setMenuItems] = useState([]);
   const [menumain, setMenumain] = useState([]);
@@ -16,28 +18,29 @@ const HomePage = () => {
 
   // ดึงข้อมูลสำหรับแต่ละเมนู
   useEffect(() => {
-    axios.get(`${URL}/api/menuItem`)
+    axios.get(`${MENU_URL}/api/menuItem`)
       .then(response => setMenuItems(response.data))
       .catch(error => console.log("Error fetching menu items:", error));
   }, []);
 
   useEffect(() => {
-    axios.get(`${URL}/api/menumain`)
-      .then(response => setMenumain(response.data))
-      .catch(error => console.log("Error fetching main dishes:", error));
+    axios.get(`${CATEGORY_URL}/api/categories/main`)
+      .then(res => setMenumain(res.data))
+      .catch(() => setMenumain([]));
   }, []);
 
   useEffect(() => {
-    axios.get(`${URL}/api/menusnack`)
-      .then(response => setMenusnack(response.data))
-      .catch(error => console.log("Error fetching snacks:", error));
+    axios.get(`${CATEGORY_URL}/api/categories/snack`)
+      .then(res => setMenusnack(res.data))
+      .catch(() => setMenusnack([]));
   }, []);
 
   useEffect(() => {
-    axios.get(`${URL}/api/menudrink`)
-      .then(response => setMenudrink(response.data))
-      .catch(error => console.log("Error fetching drinks:", error));
+    axios.get(`${CATEGORY_URL}/api/categories/drink`)
+      .then(res => setMenudrink(res.data))
+      .catch(() => setMenudrink([]));
   }, []);
+
 
   const addToCart = (item) => {
     setCart([...cart, item]);
