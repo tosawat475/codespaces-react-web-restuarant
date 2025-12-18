@@ -5,8 +5,8 @@ import Cart from './Cart';
 import axios from 'axios';
 
 const HomePage = () => {
-  const MENU_URL = "http://localhost:5000";      // backend เดิม
-  const CATEGORY_URL = "http://localhost:6001"; // category microservice
+  const MENU_URL = "http://localhost:5000";      
+  const CATEGORY_URL = "http://localhost:6001"; 
 
   
   const [menuItems, setMenuItems] = useState([]);
