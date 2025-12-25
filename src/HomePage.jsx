@@ -6,7 +6,7 @@ import axios from 'axios';
 
 const HomePage = () => {
   const MENU_URL = "http://localhost:5000";      
-  const CATEGORY_URL = "http://localhost:6001"; 
+  const CATEGORY_URL = "http://localhost:6002"; 
 
   
   const [menuItems, setMenuItems] = useState([]);
